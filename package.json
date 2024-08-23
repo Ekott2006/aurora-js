@@ -1,0 +1,36 @@
+{
+  "name": "aurora-js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/aurora.umd.cjs",
+  "module": "./dist/aurora.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/aurora.es.js",
+      "require": "./dist/aurora.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "build": "bunx eslint . && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.0.3",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/eslint__js": "^8.42.3",
+    "axios": "^1.7.5",
+    "eslint": "^9.9.0",
+    "typescript-eslint": "^8.2.0"
+  }
+}
